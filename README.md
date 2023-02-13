@@ -1,53 +1,75 @@
-# GPC - Gráficos Por Coordenadas - _índIce de Vegetação_ 
+# GPC - Gráficos Por Coordenadas - _índice de Vegetação_ 
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
 <img src="exemplo-image.png" alt="exemplo imagem">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
-> O GPC é um conjunto de projetos que visam a construção de gráficos de forma simples e dinâmica. No caso do GPC de Dados Climáticos, ele desenvolve gráficos a partir de arquivos csv ou da base de dados já instalada localmente.
+> O GPC é um conjunto de projetos que visam a construção de gráficos de forma simples e dinâmica. No caso do GPC - Indíce de Vegetação, ele desenvolve gráficos referentes aos índices de vegetação (EVI e NDVI), a partir de um determinado período de tempo, em uma coordenada selecionada pelo usuario - seja manualmente ou através da leitura de um arquivo csv. 
 
-## 💻 Pré-requisitos
+## 🚀 Iniciando o GPC de Índice de Vegetação
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
-* Baixar a Base de Dados [(BR-DWGD)](https://drive.google.com/drive/folders/11-qnvwojirAtaQxSE03N0_SUrbcsz44N)
-* Criar uma pasta com o nome "BASE DADOS" e colocar os arquivos base, que foram baixados, dentro dela.
+<img src="./assets/tela-inicial.png" alt="Tela Inicial">
 
-## 🚀 Iniciando o GPC de Dados Climáticos
-
-Após baixar a base de dados, certifique-se de que o programa e a pasta com arquivos estejam juntos, da seguinte forma:
-<img src="exemplo-estrutura-pasta.png" alt="exemplo de como devem estar estruturadas as pastas">
-
-Feito isso, agora é só abrir o programa.
-
-## ☕ Usando <nome_do_projeto>
-
-Para usar o <nome_do_projeto>, siga estas etapas:
-
+Ao abrir o programa:
 ```
-Escolher entre Gerar Dados Manualmente, utilizando a base de dados, ou Gerar Gráficos Automaticamente, a partir de um ou mais arquivos .csv
+Escolher entre Gerar Gráficos Manualmente, ou Gerar Gráficos Automaticamente, a partir de um ou mais arquivos .csv
 ```
-<img src="exemplo-estrutura-pasta.png" alt="exemplo de como devem estar estruturadas as pastas">
+
 #### Gerar Gráficos Manualmente
-- Ao clicar nessa opção, você entrará na tela de geração. 
-- Defina os parâmetros para criação do(s) gráfico(s), sendo eles **Intervalo de Tempo**, **Variáveis Climáticas** e as **Coordenadas**.
-- Clicar em "*Gerar Gráficos*"
 
-Será gerada uma pasta chamada "lat{sua latitude}_lon{sua longitude}", e dentro dela você pode encontrar o(s) gráfico(s) corresponde(s) à(s) variável(is) selecionada(s), salvo(s) no formato _.png_ 
+<img src="./assets/geracao-manual.png" alt="Tela Gerar Gráficos Manual">
+
+- Ao clicar nessa opção, você entrará na tela de geração. 
+- Será necessário então que você defina os parâmetros desejados, antes da geração do gráfico.
+- Escolha qual índice deseja salvar, NDVI ou EVI
+- Selecione o período de tempo desejado (lembrando que grandes periodos de tempo levam um tempo maior para serem processados).
+- Digite as Coordenadas que deseja.
+- Agora é só clicar em "*Gerar Gráficos*" e aguardar.
+
+Será gerada uma pasta com o nome "lat {sua latitude} e lon {sua longitude}", e dentro dela você pode encontrar o gráfico correspondente à variável selecionada, no período temporal escolhido. Além do gráfico salvo no formato _.png_, também será gerado um arquivo .csv, contendo as mesmas informações do gráfico. 
 
 #### Gerar Gráficos Automaticamente
+
+<img src="./assets/geracao-automatica.png" alt="Tela Gerar Gráficos Automaticamente">
+
 - Ao clicar nessa opção, você entrará na tela de geração. 
-- Para essa função, será necessário um ou mais arquivos csv (dentro da estrutura de leitura do programa) na mesma pasta que o programa.
-- Defina os parâmetros para criação do(s) gráfico(s), sendo eles **Intervalo de Tempo** e as **Variáveis Climáticas**.
-- Clicar em "*Gerar Gráficos*"
-
-Será gerada uma pasta com o nome do arquivo, e dentro dela você pode encontrar o(s) gráfico(s) corresponde(s) à(s) variável(is) selecionada(s), salvo(s) no formato _.png_ 
-
+- Será necessário então que você defina os parâmetros desejados, antes da geração do gráfico.
+- Escolha qual índice deseja salvar, NDVI ou EVI
+- Selecione o período de tempo desejado (lembrando que grandes periodos de tempo levam um tempo maior para serem processados).
+- Clique no botão "Selecionar Arquivos", e escolha um arquivo .csv que contenha a estrutura ideal para leitura, isto é, as colunas Id, longitude e latitude.
+- Agora é só clicar em "*Gerar Gráficos*" e aguardar.
+ 
+Será gerada uma pasta com o nome do arquivo, e dentro dela você pode encontrar o(s) gráfico(s) correspondente(s) à(s) variável selecionada(), no período temporal escolhido. Os arquivos serão salvos com o nome "ID {id} - {variável escolhida}" e no formato _.png_. 
 
 ------------------------------------------------------------------------------------
-## 📫 Contribuindo para <nome_do_projeto>
-<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
+
+## Contato
+
+No caso de dúvidas, sugestões e críticas, basta entrar em contato com:
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="./assets/Lucas Matheus.jpg" width="200px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <h3>
+            <b>Lucas Matheus</b>
+          </h3>
+        </sub>
+      </a>
+    </td>
+    <td>
+      <h3>
+        📧 <a href=mailto:lucas.matheus@vegamonitoramento.com.br>  lucas.matheus </a>
+      </h3>
+      <h3>
+        ☎ <a href="https://wa.me/+5581998176545">  +55 81 99817-6545 </a>  
+      </h3>
+    </td>
+  </tr>
+</table>
+
+  
 Para contribuir com <nome_do_projeto>, siga estas etapas:
 
 1. Bifurque este repositório.
@@ -74,7 +96,9 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/> Tio ZUck
+        
+        <br>
         <sub>
           <b>Mark Zuckerberg</b>
         </sub>
